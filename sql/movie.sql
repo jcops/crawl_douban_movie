@@ -1,0 +1,23 @@
+CREATE TABLE `movie_info` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `movie_id` INT(11) UNSIGNED NOT NULL COMMENT '电影id',
+  `movie_name` VARCHAR(100) COMMENT '电影名称',
+  `movie_pic` VARCHAR(200) COMMENT '电影图片',
+  `movie_director` VARCHAR(50) COMMENT '电影导演',
+  `movie_writer` VARCHAR(50) COMMENT '电影编剧',
+  `movie_country` VARCHAR(50) COMMENT '电影产地',
+  `movie_language` VARCHAR(50) COMMENT '电影语言',
+  `movie_main_character` VARCHAR(50) COMMENT '电影主演',
+  `movie_type` VARCHAR(50) COMMENT '电影类型',
+  `movie_on_time` TIMESTAMP DEFAULT '0000-00-00 00:00:00' COMMENT '电影上映时间',
+  `movie_span` VARCHAR(20) COMMENT '电影时长',
+  `movie_grade` VARCHAR(5) COMMENT '电影评分',
+  `remark` VARCHAR(500) DEFAULT '' COMMENT '备注',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+ `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `status` TINYINT(1) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `idx_movie_id` (`movie_id`),
+  KEY `idx_create_time` (`create_time`),
+  KEY `idx_modify_time` (`update_time`)
+) ENGINE=INNODB  DEFAULT CHARSET=utf8 COMMENT='电影信息表';
