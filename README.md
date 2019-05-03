@@ -18,15 +18,19 @@ Create a **go database** and import [SQL](https://github.com/jcops/crawl_douban_
 
 ### Conf
 
-You should modify `conf/app.ini`
+You should modify `conf/app.conf`
 
 ```
 [database]
 Type = mysql
 User = root
-Password =
+Password =123
 Host = 127.0.0.1:3306
-Name = go
+Name = test
+[redis]
+Addr=127.0.0.1:6379
+Password=
+
 ```
 
 ## Installation
@@ -41,6 +45,9 @@ go build
 
 ### 效果
 
-![1556892498059](C:\Users\niejichao\AppData\Roaming\Typora\typora-user-images\1556892498059.png)
+![1556892498059](https://github.com/jcops/crawl_douban_movie/blob/master/sql/01.png)
 
-![1556892472701](C:\Users\niejichao\AppData\Roaming\Typora\typora-user-images\1556892472701.png)
+
+
+![1556892472701](https://github.com/jcops/crawl_douban_movie/blob/master/sql/02.png)
+
